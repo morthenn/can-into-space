@@ -1,5 +1,4 @@
 # Assessment Funds Transfer Api
-
 [![Java CI with Maven](https://github.com/morthenn/can-into-space/actions/workflows/maven.yml/badge.svg)](https://github.com/morthenn/can-into-space/actions/workflows/maven.yml)
 
 ## Problem ##
@@ -42,7 +41,7 @@ Use one of the several ways of running a Spring Boot application. Below are just
 
 ## To test the application
 1. Use list of predefined accounts:
-
+    ```
    | accountId | ownerId | currency |    balance      isActive
    |   111111  |    1    | 'EUR     |  1000.10   |    true    |
    |   222222  |    1    | 'EUR     |  2000.00   |    true    |
@@ -53,8 +52,15 @@ Use one of the several ways of running a Spring Boot application. Below are just
    |   777777  |    6    | 'USD'    |  5000.72   |    true    |
    |   888888  |    7    | 'USD'    |  10.44     |    false   |
    |   999999  |    7    | 'USD'    |  7.35      |    true    |
-   
+   ```
 To order funds transfer use below endpoint and payload:
-`$ curl -X POST localhost:8080/api/v1/account/transfer-funds -d "{\"senderAccountId\": \"accountIdFromTableAbove\", \"receiverAccountId\": \"accountIdFromTableAbove\", \"amount\": numericPositive }" -H "Content-Type:application/json"
 
-
+```
+$ curl -X POST localhost:8080/api/v1/account/transfer-funds 
+  -d "{
+      \"senderAccountId\": \"accountIdFromTableAbove\",
+      \"receiverAccountId\": \"accountIdFromTableAbove\",
+      \"amount\": numericPositive
+      }" 
+  -H "Content-Type:application/json"
+```
