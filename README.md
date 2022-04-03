@@ -1,6 +1,6 @@
 # Assessment Funds Transfer Api
 
-
+[![Java CI with Maven](https://github.com/morthenn/can-into-space/actions/workflows/maven.yml/badge.svg)](https://github.com/morthenn/can-into-space/actions/workflows/maven.yml)
 
 ## Problem ##
 
