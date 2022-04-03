@@ -55,6 +55,8 @@ public class AccountService {
     private void deposit(Account account, BigDecimal amount) throws InterruptedException {
         BigDecimal newBalance = account.getBalance().add(amount);
 
+        checkIfAccountIsActive(account);
+
         account.setBalance(newBalance);
 
         //imitating legacy integration
