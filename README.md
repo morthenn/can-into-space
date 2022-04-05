@@ -64,3 +64,7 @@ $ curl -X POST localhost:8080/api/v1/account/transfer-funds
       }" 
   -H "Content-Type:application/json"
 ```
+
+## Flow Diagram
+
+![Alt text](./flow.svg)
